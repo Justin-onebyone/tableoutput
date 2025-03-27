@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableoutput</title>
+    <style>
+        table{
+            margin: 0 auto;
+        }
+
+        table,tr,td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+        }
+        
+        table{
+            width:50%;
+        }
+        td{
+            text-align:center;
+        }
+
+        td:first-child, td:last-child {
+            width: 50%;
+        }
+
+        .header{
+            font-weight:bold;
+        }
+    </style>
+
+    <script>
+        function showNumber(){
+            var a5 = 2;
+            var a20 = 28;
+            var a15 = 80;
+            var a7 = 5;
+            var a13 = 90;
+            var a12 = 3;
+
+            var value1 = a5 + a20;
+            var value2 = a15 / a7;
+            var value3 = a13 * a12;
+
+            document.getElementById("value1").innerHTML = value1;
+            document.getElementById("value2").innerHTML = value2;
+            document.getElementById("value3").innerHTML = value3;
+        }
+        window.onload = showNumber;
+    </script>
+</head>
+<body>
+    <table>
+        <tr class="header">
+            <td>Category</td>
+            <td>Value</td>
+        </tr>
+
+        <tr>
+            <td>Alpha</td>
+            <td id="value1"></td>
+        </tr>
+
+        <tr>
+            <td>Beta</td>
+            <td id="value2"></td>
+        </tr>
+
+        <tr>
+            <td>Charlie</td>
+            <td id="value3"></td>
+        </tr>
+    </table>
+</body>
+</html>
